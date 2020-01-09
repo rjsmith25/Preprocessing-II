@@ -1,1 +1,42 @@
 // Navigation Styles here
+.site-header {
+  width: 100%;
+  display: flex;
+  padding: 30px 205px;
+  border-bottom: 2px dashed silver;
+  @media @mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .site-name {
+    text-decoration: none;
+    color: black;
+    font-size: 42px;
+    font-family: "Indie Flower", cursive;
+  }
+  .nav-list {
+    margin-top: 12px;
+    margin-left: auto;
+    display: flex;
+    @media @mobile {
+      margin: 10px 0 0 0;
+    }
+    li {
+      font-size: 18px;
+      margin-right: 20px;
+      @media @mobile {
+        margin-right: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}

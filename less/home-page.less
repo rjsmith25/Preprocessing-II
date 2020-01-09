@@ -1,4 +1,21 @@
 .home {
+  .home-header {
+    border-bottom: 2px dashed silver;
+    h1 {
+      margin-top: 20px;
+      @media @mobile {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    p {
+      margin-bottom: 15px;
+      @media @mobile {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +23,34 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+        padding: 0 5px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      .keyframes(fade-in;{0% {opacity: 0;} 100% {opacity: 1;}});
+      .animation(fade-in 5s);
+      @media @mobile {
+        width: 100%;
+        padding: 0 5px;
+      }
       img {
         border-radius: 10px;
+        @media @mobile {
+          width: 100%;
+          padding: 0 5px;
+        }
       }
     }
   }
@@ -30,20 +62,35 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        padding: 0 5px;
+        order: 1;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      .keyframes(fade-in;{0% {opacity: 0;} 100% {opacity: 1;}});
+      .animation(fade-in 5s);
+      @media @mobile {
+        padding: 0 5px;
+        order: 2;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    @media @mobile {
+      width: 100%;
+      padding: 0 5px;
+    }
     img {
       border-radius: 10px;
+      .keyframes(fade-in;{0% {opacity: 0;} 100% {opacity: 1;}});
+      .animation(fade-in 5s);
     }
   }
 
@@ -52,10 +99,24 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 50px 0 50px;
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @mobile {
+        width: 100%;
+      }
+      .btn {
+        .primary-button(#008080, 200px);
+        @media @mobile {
+          .primary-button(#18a2b8, 100%);
+        }
+      }
     }
   }
-}// home
+} // home
